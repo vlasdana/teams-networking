@@ -11,13 +11,9 @@ function getTeamHTML(team) {
  </tr>`;
 }
 function displayTeams(teams) {
-  //   //   transforma in html
+  // transforma in html
+  var teamsHTML = teams.map(getTeamHTML);
 
-  var teamsHTML = teams.map(function (team) {
-    console.info(team);
-    return getTeamHTML(team);
-  });
-  console.warn("teamsHTML", teamsHTML);
   // afisare
   document.querySelector("table tbody").innerHTML = teamsHTML.join("");
 }
