@@ -11,33 +11,55 @@
       <h1>Teams Networking</h1>
       <link rel="stylesheet" href="style.css" />
     </header>
+    <form action="" method="post" id="editForm">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Menbers</th>
+            <th>Project Name</th>
+            <th>Project URL</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter Group"
+                name="promotion"
+                required
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter Members"
+                name="members"
+                required
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter Name"
+                name="name"
+                required
+              />
+            </td>
+            <td>
+              <input type="text" placeholder="Enter URL" name="url" required />
+            </td>
 
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Group</th>
-          <th>Menbers</th>
-          <th>Project Name</th>
-          <th>Project URL</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>FastTrackIT</td>
-          <td>Nicolae Matei, Andrei Ille</td>
-          <td>Team Networking</td>
-          <td><a href="https://github.com/vlasdana">GitHub</a></td>
-          <td>x e</td>
-        </tr>
-        <tr>
-          <td>2022 Won8</td>
-          <td>Dana Vlas</td>
-          <td>Personal CV</td>
-          <td><a href="https://github.com/vlasdana">GitHub</a></td>
-        </tr>
-      </tbody>
-    </table>
+            <td>
+              <button type="submit">💾</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
     <script src="index.js"></script>
   </body>
 </html>
