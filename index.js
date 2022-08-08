@@ -12,7 +12,7 @@ function getTeamHTML(team) {
 }
 function displayTeams(teams) {
   // transforma in html
-  var teamsHTML = teams.map(getTeamHTML);
+  const teamsHTML = teams.map(getTeamHTML);
 
   // afisare
   $("table tbody").innerHTML = teamsHTML.join("");
@@ -32,16 +32,18 @@ function $(selector) {
 }
 function submitForm(e) {
   e.preventDefault();
-  var promotion = $("input[name=promotion]").value;
-  var members = $("input[name=members]").value;
-  var name = $("input[name=name]").value;
-  var url = $("input[name=url]").value;
-  var team = {
+  const promotion = $("input[name=promotion]").value;
+  const members = $("input[name=members]").value;
+  const name = $("input[name=name]").value;
+  const url = $("input[name=url]").value;
+
+  const team = {
     promotion: promotion,
     members: members,
     name: name,
     url: url,
   };
+
   console.warn("submit", JSON.stringify(team));
 
   console.warn("submit", promotion, members, name, url);
