@@ -39,6 +39,15 @@ function createTeamRequest(team) {
     body: JSON.stringify(team),
   });
 }
+function removeTeamRequest(id) {
+  return fetch("https://localhost:3000/teams-json/delete", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "aplication",
+    },
+    body: JSON.stringify({ id: id }),
+  }).then((r) => r.json());
+}
 
 function submitForm(e) {
   e.preventDefault();
@@ -72,7 +81,11 @@ function initEvents() {
   form.querySelector("tbody").addEventListener("click", (e) => {
     if (e.target.matches("a.delete-btn")) {
       const id = e.target.getAttribute("data-id");
-      console.warn("click pe link", id);
+      removeTeamRequest(id).then((status) => {
+        if (status.succes) {
+          loadTeams();
+        }
+      });
     }
   });
 }
