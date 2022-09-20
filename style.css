@@ -18,6 +18,19 @@ th {
   padding: 0, 25rem;
   color: white;
 }
+#list th,
+#list td {
+  border: 1.5px solid #a18129;
+  padding: 5px;
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+#list {
+  border-collapse: collapse;
+  width: 100%;
+}
 input:not([type="image" i]) {
   box-sizing: border-box;
 }
