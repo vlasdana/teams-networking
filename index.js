@@ -118,6 +118,15 @@ function startEditTeam(id) {
 }
 
 function initEvents() {
+  $("#search").addEventListener("input", (e) => {
+    const search = e.target.value.toLowerCase();
+    const teams = allTeams.filter((team) => {
+      return team.promotion.toLowerCase().includes(search);
+    });
+
+    displayTeams(teams);
+  });
+
   const form = $("#editForm");
   form.addEventListener("submit", submitForm);
   form.addEventListener("reset", () => {
